@@ -10,11 +10,7 @@ bool checkCorrectDot(std::string number) {
 }
 
 bool checkSymbol (char symbol) {
-  if ((symbol >= '0' && symbol <= '9') || symbol == '.'){
-    return true;
-  } else {
-    return false;
-  }
+  return ((symbol >= '0' && symbol <= '9') || symbol == '.');
 }
 
 bool checkCorrectNumber(std::string number) {

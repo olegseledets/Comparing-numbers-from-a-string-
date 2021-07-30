@@ -82,8 +82,9 @@ std::string comparisonNumber(std::string numberOne, std::string numberTwo) {
   std::string oneSecondSide = findSecondSide(removeZeros(numberOne));
   std::string twoFirstSide = findFirstSide(removeZeros(numberTwo));
   std::string twoSecondSide = findSecondSide(removeZeros(numberTwo));
-
-  if(oneFirstSide[0] == '-' && twoFirstSide[0] != '-') {
+  if((numberOne == "0" && numberTwo == "-0") || (numberOne == "-0" && numberTwo == "0")){
+    return "Equal";
+  }else if(oneFirstSide[0] == '-' && twoFirstSide[0] != '-') {
     return "Less";
   } else if (oneFirstSide[0] != '-' && twoFirstSide[0] == '-') {
     return "More";
